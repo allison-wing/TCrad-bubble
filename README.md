@@ -26,9 +26,38 @@ Model Input Files: For SAM6.11.2 (Khairoutdinov and Randall, 2003)
 
 Post-Processed Model Output Files:
 
--	urad.mat:
--	varbud.mat:
--	vtan.mat:
+- urad.mat: maximum azimuthal mean radial wind (inflow is <0) at z = 194 m (third model level), for each set of simulations
+    - time: 240x1 hourly data
+    - umax_$simulation: 240x5 matrix with each row data for each ensemble member
+    - umax_$simulation_ensrange: 240x1 ensemble range
+    -umax_$simulation_mean: 240x1 ensemble mean
+- varbud.mat: domain mean of terms in moist static energy variance budget, for each set of simulations
+    - $var_$simulation: 240x5 hourly matrix with each row data for each ensemble member
+    - $var_$simulation_ensdmean: 10x1 daily mean ensemble mean
+    - $var_$simulation_ensdrange: 10x1 daily mean ensemble range
+    - $var_$simulation_ensmean: 240x1 hourly mean ensemble mean
+    - $var_$simulation_ensrange: 240x1 hourly mean ensemble range
+    - $var_$simulation_norm: 240x5 hourly matrix with each row data for each ensemble member, normalized by domain mean var(h).
+    - $var_$simulation_norm_ensdmean: normalized by domain mean var(h), 10x1 daily mean ensemble mean
+    - $var_$simulation_norm_ensdrange: normalized by domain mean var(h), 10x1 daily mean ensemble range
+    - $var_$simulation_norm_ensmean: normalized by domain mean var(h), 240x1 hourly mean ensemble mean
+    - $var_$simulation_norm_ensrange: 240x1 hourly mean ensemble range
+    - time: 240x1 hourly data
+    - timeday: 10x1 daily data
+    - variables are:
+        - hadv: advective feedback, explicitly calculated
+        - hlw: longwave feedback
+        - hsef: surface flux feedback
+        - hsw: shortwave feedback
+        - resid: residual of budget
+        - tend: tendency of FMSE variance
+        - varh: FMSE variance
+- vtan.mat: maximum azimuthal mean tangential wind at the lowest model level, for each set of simulations
+    - time: 240x1 hourly data
+    - vmax_$simulation: 240x5 matrix with each row data for each ensemble member
+    - vmax_$simulation_ensrange: 240x1 ensemble range
+    - vmax_$simulation_mean: 240x1 ensemble mean
+
 -	domainmeanvarbud/domainmeanvarbud_bubble_$simulation.mat: domain mean of terms in moist static energy variance budget
     -	mean_$var = domain mean, hourly mean
     -	dmean_$var = domain mean, daily mean
