@@ -1,0 +1,91 @@
+&PARAMETERS
+
+caseid ='1024x1024x74_2km_10s_300K'
+
+nrestart = 1,
+
+dt = 10.,
+dx = 2000.
+dy = 2000.
+
+day0=80.5,
+
+nstop    = 86400,
+nelapse = 17280,
+!nelapse = 1080,
+nprint   = 360,
+nstat    = 360,
+nstatfrq = 36,
+
+restart_sep = .false.,
+output_sep = .false.,
+nrestart_skip = 5,
+
+CEM = .true.,
+
+dofplane = .true.
+docoriolis = .true.,
+fcor = 5.0e-5,
+
+doseasons = .false.,
+nrad = 30,
+!doperpetual = .true.,
+!dosolarconstant = .true.,
+!solar_constant = 551.58,
+!zenith_angle = 42.05,
+latitude0 = 20.95,
+
+OCEAN = .true.,
+tabs_s = 300.,
+
+nxco2 = 1.,
+dosgs           = .true.,
+dodamping       = .true.,
+doupperbound    = .false.,
+docloud         = .true.,
+doprecip        = .true.,
+dolongwave      = .false.,
+doshortwave     = .true.,
+dosurface       = .true.,
+dolargescale    = .false.,
+doradforcing    = .true.,
+dosfcforcing    = .false.,
+donudging_uv    = .false.,
+donudging_tq    = .false.,
+doradhomo       = .false.,
+doswradqvfix    = .false., 
+dolwradqvfix    = .false., 
+
+tauls = 7200.,
+
+SFC_FLX_FXD    = .false.,
+SFC_TAU_FXD    = .false.,
+
+doisccp = .false.,
+
+doSAMconditionals = .true.
+dosatupdnconditionals = .true.
+
+nsave2D = 360,
+nsave2Dstart    = 0,
+nsave2Dend      = 999999999,
+save2Dsep = .false.
+save2Davg = .true.
+
+nsave3D = 360,
+nsave3Dstart    = 0,
+nsave3Dend      = 999999999,
+save3Dbin      = .false.
+
+perturb_type = 2,
+bubble_x0 = 1024000.,
+bubble_y0 = 1024000.,
+bubble_z0 = 4000.,
+bubble_radius_hor = 250000.,
+bubble_radius_ver = 2000.,
+bubble_dtemp = 10.,
+bubble_dq = 0.0069360,
+
+/
+
+
