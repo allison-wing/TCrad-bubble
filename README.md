@@ -1,5 +1,5 @@
 # TCrad-bubble
-Model configuration files and post-processed output data files from Wing (2021) bubble simulations of TC radiative feedbacks.
+Model configuration files and post-processed output data files from Wing (2021): Acceleration of tropical cyclone development by cloud-radiative feedbacks, J. Atmos. Sci., submitted.
 
 Each sub-folder contains model input files for each set of simulations:
 
